@@ -1,5 +1,4 @@
 
-
 ## Clasificación de Imágenes con PyTorch
 
 ### Descripción del Problema
@@ -42,6 +41,13 @@ Este tipo de solución es útil en contextos como:
 
 ---
 
+### Consideraciones Importantes
+
+* El archivo `ai-competition01-jerom` incluido en este repositorio **debe ser utilizado como benchmark oficial** para evaluar el rendimiento del modelo implementado.
+* Los datos utilizados para entrenar la red fueron y **deben ser obtenidos directamente desde la Competición 1 alojada en Kaggle**. Asegúrate de descargarlos desde la fuente original para mantener la coherencia con la evaluación y los resultados esperados.
+
+---
+
 ### Cómo Ejecutar el Proyecto
 
 #### 1. Pre-requisitos
@@ -58,6 +64,7 @@ Estructura esperada:
 
 ```
 proyecto_IA.ipynb
+ai-competition01-jerom
 /dataset/
     ├── clase1/
     │   ├── img1.jpg
@@ -97,3 +104,28 @@ Luego corre las celdas secuencialmente.
 * matplotlib
 
 ---
+
+### Mejora Potenciales
+
+* Implementación de **data augmentation** para mejorar la robustez del modelo.
+* Inclusión de **técnicas de regularización** (dropout, batch normalization).
+* Experimentación con **transfer learning** usando modelos preentrenados.
+* Uso de métricas adicionales: F1-score, matriz de confusión, ROC-AUC.
+* Exportación del modelo entrenado con `torch.save()` para uso en producción o inferencia por lotes.
+
+---
+
+### Reproducibilidad
+
+Para asegurar la reproducibilidad:
+
+* Se establecen semillas aleatorias (`torch.manual_seed`) en el notebook.
+* La división de los datos es estratificada.
+* Los hiperparámetros usados (como tamaño del lote, tasa de aprendizaje y número de épocas) están documentados y configurados explícitamente.
+
+---
+
+### Autor
+
+Desarrollado por Jerónimo Osorio Muñoz, Valentina Ortega Vargas, Sofia Castaño Pulgarin, Sebastian Tapias Gomez, como parte del proyecto final de inteligencia artificial.
+
